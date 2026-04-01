@@ -20,9 +20,5 @@ class DataLoader:
             all_files.extend(documents)
         return all_files
 
-if __name__ == "__main__":
-    data_loader = DataLoader('../data/pdfs')
-    documents = data_loader.load_data()
-    print(documents)  # Print the first document to verify
-    print(f"Loaded {len(documents)} documents.")
+
     
