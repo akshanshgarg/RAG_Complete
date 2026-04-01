@@ -1,16 +1,16 @@
-from src.dataloader import DataLoader
-from src.embedding import Embedding
+# from src.dataloader import DataLoader
+# from src.vector_store import FaissVectorStore
+from src.search import RagSearch
+import warnings
+warnings.filterwarnings('ignore')
 
 
 if __name__ == "__main__":
-    # Load data
-    data_loader = DataLoader(data_dir='data')
-    documents = data_loader.load_data()
 
-    # Initialize embedding model
-    embedder = Embedding()
+    rag_search = RagSearch("./data/vector_store")
+    user_query = "What is Attention Mechanism?"
+    summary = rag_search.search_summarize(user_query)
 
+    print(f"{summary}")
     
-
-    print(f"Loaded {len(documents)} documents.")
-
+ 

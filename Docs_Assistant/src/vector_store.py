@@ -1,7 +1,6 @@
-from embedding import EmbeddingPipeline
-from dataloader import DataLoader
+from .dataloader import DataLoader
+from .embedding import EmbeddingPipeline
 import numpy as np
-import uuid
 import faiss
 import os
 import pickle

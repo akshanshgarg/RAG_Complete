@@ -18,6 +18,7 @@ class DataLoader:
                 doc.metadata['source'] = str(file)  
                 doc.metadata['filename'] = file.name  
             all_files.extend(documents)
+        print(f"[INFO] Loaded {len(all_files)} documents from {self.data_dir}.")
         return all_files
 
 
